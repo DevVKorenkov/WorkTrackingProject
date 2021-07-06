@@ -7,4 +7,4 @@ The client receives data in real time. Each change is immediately visible to all
 
 For a test, run WorkTracking_Server then NewWorkTracking. The server will create a test local database. Next, you need to add the user directly to the database in the dbo.Admins table. The username must exactly match the Asset Directory card
 
-To run the WorkTrackingSite test, you need to add a link to the Install_Printers_Lib library from the Install Printers project
+To run the WorkTrackingSite test, you need to add a link to the Install_Printers_Lib_Framework library from the Install Printers project
