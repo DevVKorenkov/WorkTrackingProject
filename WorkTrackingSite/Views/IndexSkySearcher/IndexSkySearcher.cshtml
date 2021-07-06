@@ -1,0 +1,151 @@
+﻿@*@{ Layout = "MenuLayout"; }*@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница Work Tracking</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/lightbox.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/lightbox-plus-jquery.min.js"></script>
+</head>
+
+<body class="body">
+    <script src="/js/headerMenu.js"></script>
+    <main class="main">
+        <section class="section-description">
+            <div class="container">
+                <div class="description-content">
+                    <h1 class="main-heading">
+                        Описание программы Sky Searcher
+                    </h1>
+                    <h3 class="lowheading lowheading-description">
+                        Sky Searcher - это средство просмотра, записи и изменения инвентарных номеров ПК в Active Directory.
+                    </h3>
+                </div>
+            </div>
+        </section>
+        <section class="section-manual">
+            <div class="container">
+                <p class="section-description-text">
+                    Далее на странице будет представлена краткая инструкция по работе с программой Sky Searcher.
+                </p>
+                <p class="section-description-text">
+                    Sky Searcher умеет искать как один ПК так и несколько сразу, однако для поиска нескольких ПК необходимо активировать "Мастер режим". Так же присутствует функция загрузки файла Excel, но его необходимо подготовить определенным образом. Файл должен содержать 3 колонки "Имя ПК", "Учетная система" и "Инвентарный номер". Вводить инверный номер следует с нулями.
+                    Для каждой учетной системы существует свой префикс. 296 - "Деловые линии" (Пример инвентарного номера: 296000001234), 600 - "ДЛ Транс" (Пример инвентарного номера: 600000001234), 296CC - "Контакт центр" (Пример инвентарного номера: 296CC0001234).
+                    Для "Контакт центра" так же существуют инвентарные номера с префиксом 296.
+                    Для корректного внесения данных необходимо выбрать учетную систему, затем ввести инвентарный номер не вводя префикс.
+                </p>
+                <h3 class="RegularFontStyle">
+                    <a href="~/CurrentVersionSkySearcher/SkySearcher.zip">Скачать Sky Searcher</a>
+                </h3>
+                <p class="section-description-text">
+                    На каждое изображение можно нажать для просмотра.
+                </p>
+                <div class="manual-content">
+                    <h2 class="manual-heading">
+                        Примеры этикеток:
+                    </h2>
+                    <div class="manual-flex-no-wrap">
+                        <div class="manual-block">
+                            <h5 class="goldenrod-clr">
+                                Грузоперевозки
+                            </h5>
+                            <a href="~/img/MainSkySearcher/InvGP.jpg" data-lightbox="roadtrip">
+                                <img src="~/img/MainSkySearcher/InvGP.jpg" alt="Грузоперевозки"
+                                     class="manual-img">
+                            </a>
+                        </div>
+                        <div class="manual-block">
+                            <h5 class="goldenrod-clr">
+                                ДЛ Транс
+                            </h5>
+                            <a href="~/img/MainSkySearcher/InvDLT.jpg" data-lightbox="roadtrip">
+                                <img src="~/img/MainSkySearcher/InvDLT.jpg" alt="ДЛ Транс"
+                                     class="manual-img">
+                            </a>
+                        </div>
+                        <div class="manual-block">
+                            <h5 class="goldenrod-clr">
+                                Контакт Центр
+                            </h5>
+                            <a href="~/img/MainSkySearcher/InvCC.jpg" data-lightbox="roadtrip">
+                                <img src="~/img/MainSkySearcher/InvCC.jpg" alt="Контакт Центр"
+                                     class="manual-img">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="manual-flex">
+                        <div class="manual-block">
+                            <h2 class="manual-heading">
+                                Поиск одного ПК:
+                            </h2>
+                            <a href="~/img/MainSkySearcher/OnePc.gif" data-lightbox="roadtrip">
+                                <img src="~/img/MainSkySearcher/Interface.png" alt="Поиск одного ПК"
+                                     class="manual-img">
+                            </a>
+                        </div>
+                        <div class="manual-block">
+                            <h2 class="manual-heading">
+                                Мастер режим:
+                            </h2>
+                            <a href="~/img/MainSkySearcher/ActivateMaster.gif" data-lightbox="roadtrip">
+                                <img src="~/img/MainSkySearcher/MasterPreview.png" alt="Поиск одного ПК"
+                                     class="manual-img">
+                            </a>
+                        </div>
+                        <div class="manual-block">
+                            <h2 class="manual-heading">
+                                Поиск нескольких ПК:
+                            </h2>
+                            <a href="~/img/MainSkySearcher/ManyPc.gif" data-lightbox="roadtrip">
+                                <img src="~/img/MainSkySearcher/ManyPcPreview.png" alt='Поиск нескольких ПК"'
+                                     class="manual-img">
+                            </a>
+                        </div>
+                        <div class="manual-block">
+                            <h2 class="manual-heading">
+                                Внесение данных:
+                            </h2>
+                            <a href="~/img/MainSkySearcher/InputData.gif" data-lightbox="roadtrip">
+                                <img src="~/img/MainSkySearcher/inputDataPreview.png" alt='Внесение данных'
+                                     class="manual-img">
+                            </a>
+                        </div>
+                        <div class="manual-block">
+                            <h2 class="manual-heading">
+                                Удаление данных:
+                            </h2>
+                            <a href="~/img/MainSkySearcher/DeleteData.gif" data-lightbox="roadtrip">
+                                <img src="~/img/MainSkySearcher/DeleteDataPreview.png" alt='Обзор вкладки "Устройства"'
+                                     class="manual-img">
+                            </a>
+                        </div>
+                        <div class="manual-block">
+                            <h2 class="manual-heading">
+                                Загрузка данныз из файла Excel:
+                            </h2>
+                            <a href="~/img/MainSkySearcher/Excele.gif" data-lightbox="roadtrip">
+                                <img src="~/img/MainSkySearcher/ExcelePreview.png" alt='Загрузка данныз из файла Excel'
+                                     class="manual-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="RegularFontStyle">
+                    <a href="~/CurrentVersionSkySearcher/SkySearcher.zip">Скачать Sky Searcher</a>
+                </h3>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>
+            Информация будет добавлена позже.
+        </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+﻿@using Install_Printers_Lib.Models
+@{ }
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница Work Tracking</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/lightbox.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/lightbox-plus-jquery.min.js"></script>
+</head>
+
+<body class="body">
+    <script src="/js/headerMenu.js"></script>
+    <main class="main">
+        <section class="section-description">
+            <div class="container">
+                <div class="description-content">
+                    <h1 class="main-heading">
+                        Описание программы Install Printers
+                    </h1>
+                    <h3 class="lowheading lowheading-description">
+                        Install Printers - это простое средство для установки драйверов сетевых и usb принтеров.
+                    </h3>
+                </div>
+            </div>
+        </section>
+        <section class="section-manual">
+            <div class="container">
+                <p class="section-description-text">
+                    Далее на странице будет представлена краткая инструкция по работе с программой Install Printers.
+                </p>
+                <h3 class="RegularFontStyle">
+                    <a href="~/CurrentVersionInstallPrinters/Install_Printers.zip">Скачать Install Printers</a>
+                </h3>
+                <p class="section-description-text">
+                    В скачиваемом архиве находятся 2 программы. Install Printers для установки драйверов (предназначена для пользователей) и Upload Printers Drivers для загрузки драйверов на сервер (предназначена для ТП и ОКС).
+                </p>
+                <p class="section-description-text">
+                    На каждое изображение можно нажать для просмотра.
+                </p>
+                <div class="manual-content">
+                    <div class="manual-flex">
+                        <div class="manual-block">
+                            <h2 class="manual-heading">
+                                Установка принтера:
+                            </h2>
+                            <a href="~/img/MainInstallPrinters/InstallDrivers.gif" data-lightbox="roadtrip">
+                                <img src="~/img/MainInstallPrinters/installPreview.png" alt="Установка принтера"
+                                     class="manual-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="manual-flex">
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Загрузка драйвера:
+                        </h2>
+                        <a href="~/img/MainInstallPrinters/UploadDrivers.gif" data-lightbox="roadtrip">
+                            <img src="~/img/MainInstallPrinters/UploadPreview.png" alt="Загрузка драйвера"
+                                 class="manual-img">
+                        </a>
+                    </div>
+                </div>
+                <p class="section-description-text red-clr">
+                    Перед заливкой драйвера на сервер необходимо убедиться, что введенное вами название принтера содержаться в любом из .inf файлов папки с драйвером принтера.
+                </p>
+                <div class="manual-flex">
+                    <div class="manual-block">
+                        <h4 class="manual-heading">
+                            Корректно:
+                        </h4>
+                        <p class="section-description-text">
+                            В данном случае принтер будет подключен без проблем.
+                        </p>
+                        <a href="~/img/MainInstallPrinters/Example_1.png" data-lightbox="roadtrip">
+                            <img src="~/img/MainInstallPrinters/Example_1.png" alt="Загрузка драйвера"
+                                 class="manual-img">
+                        </a>
+                    </div>
+                </div>
+                <div class="manual-flex">
+                    <div class="manual-block">
+                        <h4 class="manual-heading">
+                            Не корректно:
+                        </h4>
+                        <p class="section-description-text">
+                            В данном случае драйверы принтера будут установлены, но сам принтер не будет подключен.
+                        </p>
+                        <a href="~/img/MainInstallPrinters/Example_2.png" data-lightbox="roadtrip">
+                            <img src="~/img/MainInstallPrinters/Example_2.png" alt="Загрузка драйвера"
+                                 class="manual-img">
+                        </a>
+                    </div>
+                </div>
+                <p class="section-description-text">
+                    Вышеописанная проблема не касается установки usb принтеров и сетевых принтеров\МФУ подключенных по usb.
+                </p>
+                <hr/>
+                <h3 class="RegularFontStyle">
+                    <a href="/UploadPrinterDriver/UploadPrinterDriver">Добавить драйвер принтера</a>
+                </h3>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>
+            Информация будет добавлена позже.
+        </p>
+    </footer>
+</body>
+
+</html>
+

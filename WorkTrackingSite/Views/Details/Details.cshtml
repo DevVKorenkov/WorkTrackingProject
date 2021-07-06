@@ -1,0 +1,502 @@
+﻿@*@{ Layout = "MenuLayout"; }*@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подробная инструкция Work Tracking</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/lightbox.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/headerMenu.js"></script>
+    <script src="/js/lightbox-plus-jquery.min.js"></script>
+</head>
+
+<body class="body">
+    <main class="main">
+        <section class="section-description">
+            <div class="container">
+                <div class="details-content">
+                    <h1 class="main-heading lowheading-details">
+                        Инструкция программы Work Tracking
+                    </h1>
+                    <h3 class="lowheading lowheading-details">
+                        На этой странице представлена подробная инструкция к программе Work Tracking
+                    </h3>
+                </div>
+            </div>
+        </section>
+        <section class="section-details">
+            <div class="container">
+                <p class="">Программа оперирует несколькими объектами:</p>
+                <ul class="details-list">
+                    <li class="details-item">
+                        Работа/Заявка" - выполненная работа пользователя добавленная в БД.
+                    </li>
+                    <li class="details-item">
+                        "Ремонт" - ремонт устройства, выполняемый поставщиком услуг, например таким как сервисный центр.
+                    </li>
+                    <li class="details-item">
+                        "Устройство" - запись данных об устройстве. Так же включает в себя записи "ремонтов" по
+                        конкретному устройству.
+                    </li>
+                </ul>
+                <p>
+                    В программе определены несколько вкладок, доступных в зависимости от уровня доступа пользователя.
+                    Кнопки перехода по вкладкам расположены в левой части окна программы.
+                </p>
+                <ul class="details-list">
+                    <li class="details-item">
+                        "Мои заявки" - Отображает выполненные работы пользователя за месяц от текущей даты
+                    </li>
+                    <li class="details-item">
+                        "Все заявки" - Отображает все выполенные работы всех пользователей за все время. Позволяет
+                        фильтровать, выгружать и изменять работы пользователей.
+                    </li>
+                    <li class="details-item">
+                        "Все ремонты" - Отображает все ремонты за все время. Позволяет фильтровать, выгружать и изменять
+                        ремонты.
+                    </li>
+                    <li class="details-item">
+                        "Устройства" - Отображает добавленные устройства и их ремонты. Позволяет изменять устройства и
+                        их ремонты.
+                    </li>
+                    <li class="details-item">
+                        "Администрирование" - Отображает списки обектов. Позволяет добавлять, изменять и удалять
+                        объекты.
+                    </li>
+                </ul>
+                <div class="manual-block">
+                    <h2 class="manual-heading">
+                        Запуск программы:
+                    </h2>
+                    <p class="lowheading">
+                        Запуск программы производится двойным кликом по файла Work_Tracking.exe. Во время
+                        запуска производится проверка подключения и получение данных с сервера.
+                    </p>
+                    <a href="/img/ManualDetails/StartProgram.gif" data-lightbox="roadtrip">
+                        <img src="/img/preview/Start_Preview.png" alt="Запуск программы"
+                             class="details-img">
+                    </a>
+                </div>
+                <div class="details-content">
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Вкладки программы:
+                        </h2>
+                        <a href="/img/ManualDetails/Tabs.gif" data-lightbox="roadtrip">
+                            <img src="/img/preview/My_works_Prewiew.png" alt="Вкладки программы" class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Изменение сервера при запуске программы:
+                        </h2>
+                        <p class="lowheading text-width">
+                            Если при проверке подключения произошла ошибка или сервер изменился, то программы выдаст
+                            предупреждение. Вы можете изменить сервер подключения. Для этого нажмите кнопку "Да",
+                            введите имя сервера и нажмите кнопку "Применить". Программа проверит подключение к
+                            новому серверу и будет перезапущена с новыми параметрами. При нажатии кнопки "Нет"
+                            программа будет закрыта. При нажатии "Повторить" будет произведена попытка подключения с
+                            текущими параметрами.
+                        </p>
+                        <a href="/img/ManualDetails/ChangeServerInLoad.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Change_Server_On_Load.png" alt="Изменение сервера при запуске программы"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Изменение сервера в запущенной программе:
+                        </h2>
+                        <p class="lowheading">
+                            Адрес сервера можно сменить в процессе выполнения программы. Для этого необходимо нажать
+                            на кнопку "Сменить сервер" в нижнем левом углу и ввести адрес сервера. Программа
+                            проверит соединение с новым сервером и, при удачной проверке, перезапуститься с новыми
+                            параметрами.
+                        </p>
+                        <a href="/img/ManualDetails/ChangeServer.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Change_Server_In_Program.png" alt="Изменение сервера в запущенной программе"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Добавление новой работы в БД:
+                        </h2>
+                        <p class="lowheading">
+                            Для добавления выполненной работы необходимо заполнить все поля в левой части окна
+                            программы, во вкладке "Мои заявки".
+                        </p>
+                        <a href="/img/ManualDetails/AddNewWork.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/My_works_Prewiew.png" alt="Добавление новой работы в БД"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Необходимо заполнять все поля:
+                        </h2>
+                        <p class="lowheading">
+                            Если не все поля были заполнены, то программа выдас ошибку в которой будет указано какие
+                            поля не были заполнены.
+                        </p>
+                        <a href="/img/ManualDetails/ErrorOfAdd.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Add_Eror_Preview.png" alt="Необходимо заполнять все поля"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Ограничения при заполнении:
+                        </h2>
+                        <p class="lowheading">
+                            Так же в полях "Номер заяки", "Инвентарный номер неисправного устройства" и "Инвентарный
+                            номер нового устройства" производится проверка вводимых данных. В поле "Номер заявки" можно
+                            вводить только цифры. В поля "Инвентарный номер неисправного устройства" и "Инвентарный
+                            номер нового устройства" можно вводить буквы и цифры. Длинна строки должна быть от 10 до 12
+                            символов.
+                        </p>
+                        <p class="light-red-clr">
+                            Необходимо помнить, что при выборе результата работ "Гарантийный ремонт" или "Платный
+                            ремонт" будет автоматически создан ремонт устройства (Если устройства с таким инвентарным
+                            номером нет, то будет так же создана запись устройства).
+                        </p>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Поиск в выпадающих списках:
+                        </h2>
+                        <p class="lowheading">
+                            В выпадающих списках реализован поиск.
+                        </p>
+                        <a href="/img/ManualDetails/SearchInCombobox.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/ComboBox_Search_Preview.png" alt="В выпадающих списках реализован поиск"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Вкладка "все заявки":
+                        </h2>
+                        <p class="lowheading">
+                            В этой вкладке отображаются все работы всех пользователей. При необходимости можно
+                            фильтровать выполненные работы предоставленными фильтрами. Можно выбирать несколько фильтров
+                            одновременно.
+                        </p>
+                        <a href="/img/ManualDetails/Filtering.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/All_Works_Preview.png" alt='Вкладка "все заявки"'
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Очистка фильтров.
+                        </h2>
+                        <p class="lowheading">
+                            Очистка фильтров осуществляется кнопкрй "Очистить фильтры"
+                        </p>
+                        <a href="/img/ManualDetails/CleanFilters.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Reset_Filters_Preview.png" alt="Очистка фильтров"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Поиск:
+                        </h2>
+                        <p class="lowheading">
+                            Поиск по ключивым словам производится в поле "поиск". Поиск не зависит от региста.
+                        </p>
+                        <a href="/img/ManualDetails/Search.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Search_Preview.png" alt="Поиск" class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Выгрузка данных:
+                        </h2>
+                        <p class="lowheading">
+                            Реализована возможность выгрузки данных в файл Excel.
+                        </p>
+                        <a href="/img/ManualDetails/ExcelAll.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Download_Data_Preview.png" alt="Выгрузка данных"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Выгрузка данных:
+                        </h2>
+                        <p class="lowheading">
+                            Реализована возможность выгрузки отфильтрованных данных в файл Excel.
+                        </p>
+                        <a href="/img/ManualDetails/ExcelDate.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Download_filtered_Data_Preview.png" alt="выгрузки отфильтрованных данных"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Выгрузка данных:
+                        </h2>
+                        <p class="lowheading">
+                            Реализована возможность выгрузки выделеных данных в файл Excel.
+                        </p>
+                        <a href="/img/ManualDetails/ExcelChose.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Download_allocated_Data_Preview.png" alt="выгрузки выделеных данных"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <h2 class="manual-heading">
+                        Импорт данных:
+                    </h2>
+                    <p class="lowheading">
+                        Так же в наличии фунция импорта ремонтов из файла Excel. Для загрузки, файл xlsx должен быть
+                        правильно отформатирован, содержать шапку и следующие поля:
+                    </p>
+                    <div class="manual-flex">
+                        <div class="manual-block">
+                            <ol>
+                                <li>
+                                    Дата
+                                </li>
+                                <li>
+                                    Статус
+                                </li>
+                                <li>
+                                    Наименование\Тип ОС
+                                </li>
+                                <li>
+                                    Модель
+                                </li>
+                                <li>
+                                    Серийный номер
+                                </li>
+                                <li>
+                                    Инвентарный номер
+
+                                </li>
+                                <li>
+                                    Сц Окс
+                                </li>
+                                <li>
+                                    Основание
+                                </li>
+                                <li>
+                                    КА поставщик
+                                </li>
+                                <li>
+                                    КА ремонт
+                                </li>
+                                <li>
+                                    Передал
+                                </li>
+                                <li>
+                                    Неисправность
+                                </li>
+                                <li>
+                                    Дата отгрузки
+                                </li>
+                                <li>
+                                    Вернулось из ремонта
+                                </li>
+                                <li>
+                                    Номер заявки поставщика
+                                </li>
+                                <li>
+                                    Согласованная стоимость
+                                </li>
+                                <li>
+                                    Основание гарантии
+                                </li>
+                                <li>
+                                    Дата начала гарантии
+                                </li>
+                                <li>
+                                    Тип ремонта
+                                </li>
+                            </ol>
+                            <p>
+                                <a href="/ExcelExample/Example.xlsx">Образец файла Excel</a>
+                            </p>
+                        </div>
+                        <a href="/img/ManualDetails/LoadRepairsExcel.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Upload_Data_Preview.png" alt="Импорт данных"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Изменение данных:
+                        </h2>
+                        <p class="lowheading">
+                            При необходимости можно менять данные в работах. Для этого необходимо выбрать запись работы в таблице, при этом отобразятся все данные в полях под таблицей. После произведения изменений необходимо нажать кнопку "Записать".
+                        </p>
+                        <a href="/img/ManualDetails/ChangeWork.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Change_Data_Preview.png" alt="Изменение данных"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h3 class="manual-heading">
+                            Цветовая индикация статусов заявки:
+                        </h3>
+                        <ul>
+                            <li>
+                                "Архив" <span class="red-clr">(Красный)</span> - Запись считается ошибочной или не актуальной.
+                            </li>
+                            <li>
+                                "Необходимо заполнить номер модернизации или списания" <span class="yellow-clr">(Желтый)</span> - По заявке быда произведена замена комплектцющих или устройства.
+                            </li>
+                            <li>
+                                Списано" <span class="blue-clr">(Голубой)</span> - После проведения работ устройство было списано.
+                            </li>
+                            <li>
+                                "Модернизировано" <span class="green-clr">(Зеленый)</span> - Произведено обновление устройства.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Вкладка ремонты:
+                        </h2>
+                        <p class="lowheading">
+                            Данная вкладка не отличается от вкладки "Все работы" в плане пользовательского интерфейса. Фильтрация, поиск и изменение данных производится точно так же, как было описано выше для вкладки "Все работы".
+                        </p>
+                        <p class="lowheading">
+                            Добавление нового ремонта производится в новом окне, по нажатию кнопки "Добавить ремонт". Необходимо ввести актуальные данные, при этом, нет необходимости заполнять все поля сразу. Сделано это по причине различных факторов, влияющих на количество данных у сотрудника, заполняещего форму ремонта на данный момент. Если устройство с таким инвентарным номером уже существует, то ремонт привязывается к этому устройству, если такого устройства нет, то оно будет создано автоматически.
+                        </p>
+                        <a href="/img/ManualDetails/AddRepair.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Add_New_Repair.png" alt="Добавление нового ремонта"
+                                 class="details-img">
+                        </a>
+                        <p>
+                            Каждый ремонт привязан к определенному устройству устройству по инвентарному номеру. К устройству может быть привязано неограниченное количество ремонтов. При изменении инвентрного номера в ремонте, сам ремонт не перейдет в список ремонтов другого устройства. Это сделано, чтобы избежать ошибков при случайном изменении инвентраного номера.
+                        </p>
+                        <p>
+                            Цвет шрифта в столбце "Дней в ремонте" меняется в зависимости от количества дней проведенных в ремонте. Белый - менее 15 дней, <span class="yellow-clr">желтый</span> - более 15 и менее 30 дней, <span class="red-clr">Красный</span> - более 30 дней.
+                        </p>
+                    </div>
+                    <div class="manual-block">
+                        <p class="lowheading">
+                            для более удобного отображения данных можно скрывать столбцы в контестном меню.
+                        </p>
+                        <a href="/img/ManualDetails/HideColumns.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Hiden_Columns_Preview.png" alt="скрытие столбцов"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Вкладка устройства:
+                        </h2>
+                        <p class="lowheading">
+                            Данная вкладка содержит список устройств и их ремонты. При выборе устройства, в правой части окна будут отображаться ремонты, привязанные к этому устройству. ремонты можно изменять так же как во вкладке "Все ремонты". При необходимости можно добавлять устройства вручную. Для этого необходимо запонить поля в левой верхней части вкладки "Устройства".
+                        </p>
+                        <a href="/img/ManualDetails/AddDevice.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Add_Device_Preview.png" alt="Добавление устройства"
+                                 class="details-img">
+                        </a>
+                        <p class="lowheading">
+                            Если при добавлении устройства сервер обнаружит, что устройство с таким инвентарным номером уже существует, то программа выдаст ошибку.
+                        </p>
+                        <a href="/img/ManualDetails/AddDeviceError.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Add_Device_Error_Preview.png" alt="Ошибка добавления"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <p class="lowheading">
+                            Под списком устройств можно менять данные по выбраному устройству. Если изменить инвентарный номер устройства, то список ремонтов останется прежним.
+                        </p>
+                        <a href="/img/ManualDetails/ChangeDevice.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Change_Device_Preview.png" alt="Изменение устройства"
+                                 class="details-img">
+                        </a>
+                        <p class="lowheading">
+                            Для каждого устройства так же можно добавлять ремонты. Для этого необходимо нажать кнопку "Добавить ремонт". Форма добавления такая же как и во вкладке "Все ремонты".
+                        </p>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Вкладка администрирование:
+                        </h2>
+                        <p class="lowheading">
+                            В этой вкладке производится управление пользователями и их уровнями доступа, выпадающими списками, статусами и т.д.
+                        </p>
+                        <p class="lowheading">
+                            В левой части вкладки находятся категории записей.
+                        </p>
+                        <a href="/img/ManualDetails/ChouseCategory.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Administrate_Categories_List.png" alt="категории записей"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Добавление записи:
+                        </h2>
+                        <a href="/img/ManualDetails/AddObject.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Add_Object_Preview.png" alt="краткий обзор интерфейса"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Изменение записи:
+                        </h2>
+                        <a href="/img/ManualDetails/ChangeObject.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Add_Object_Preview.png" alt="краткий обзор интерфейса"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Удаление записи:
+                        </h2>
+                        <a href="/img/ManualDetails/DeleteObject.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Add_Object_Preview.png" alt="краткий обзор интерфейса"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Добавление пользователя:
+                        </h2>
+                        <a href="/img/ManualDetails/addUser.gif" data-lightbox="roadtrip">
+                            <img src="~/img/preview/Add_User_Preview.png" alt="краткий обзор интерфейса"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Изменение записи:
+                        </h2>
+                        <a href="/img/ManualDetails/ChangeUser.gif" data-lightbox="roadtrip">
+                            <img src="/img/preview/Add_User_Preview.png" alt="краткий обзор интерфейса"
+                                 class="details-img">
+                        </a>
+                    </div>
+                    <div class="manual-block">
+                        <h2 class="manual-heading">
+                            Удаление записи:
+                        </h2>
+                        <a href="/img/ManualDetails/DeleteUser.gif" data-lightbox="roadtrip">
+                            <img src="/img/preview/Add_User_Preview.png" alt="краткий обзор интерфейса"
+                                 class="details-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>
+            Информация будет добавлена позже.
+        </p>
+    </footer>
+</body>
+</html>

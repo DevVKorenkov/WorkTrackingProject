@@ -1,0 +1,7 @@
+D:\Projects\GitProjects\Work_Tracking_Project\WorkTrackingLib\bin\Debug\WorkTrackingLib.dll.config
+D:\Projects\GitProjects\Work_Tracking_Project\WorkTrackingLib\bin\Debug\WorkTrackingLib.dll
+D:\Projects\GitProjects\Work_Tracking_Project\WorkTrackingLib\bin\Debug\WorkTrackingLib.pdb
+D:\Projects\GitProjects\Work_Tracking_Project\WorkTrackingLib\obj\Debug\WorkTrackingLib.csprojAssemblyReference.cache
+D:\Projects\GitProjects\Work_Tracking_Project\WorkTrackingLib\obj\Debug\WorkTrackingLib.csproj.CoreCompileInputs.cache
+D:\Projects\GitProjects\Work_Tracking_Project\WorkTrackingLib\obj\Debug\WorkTrackingLib.dll
+D:\Projects\GitProjects\Work_Tracking_Project\WorkTrackingLib\obj\Debug\WorkTrackingLib.pdb

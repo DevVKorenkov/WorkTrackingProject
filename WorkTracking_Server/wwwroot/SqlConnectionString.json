@@ -1,0 +1,5 @@
+{
+  "work": { "ConnectionString": "Server=SKY-244\\OKS_SQL;DataBase=PassYourWork;Integrated Security=True" },
+  "test": { "ConnectionString": "Server=(localdb)\\MSSQLLocalDB;DataBase=TestWorkTracking;Integrated Security=True" },
+  "localTest": { "ConnectionString": "Server=SKY-244\\OKS_SQL;DataBase=TestWorkTracking;Integrated Security=True" }
+}

@@ -1,0 +1,267 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+h3{
+    color: white;
+}
+
+h4{
+    color: white;
+}
+
+a{
+    color: goldenrod;
+}
+
+a:active {
+    color: goldenrod;
+}
+
+p{
+    color: white;
+}
+
+ul{
+    color: goldenrod;
+    text-align: left;
+}
+
+li-printers {
+    color: goldenrod;
+    text-align: right;
+}
+
+ol{
+    color: goldenrod;
+    text-align: left;
+}
+
+.body{
+    border-bottom: 2px solid darkgray;
+    background-color: #1d1d1d;
+}
+
+.button {
+    padding: 8px;
+    color: white;
+    border: 2px solid goldenrod;
+    border-radius: 5px;
+}
+
+input[type=submit] {
+    padding: 8px;
+    color: white;
+    border: 2px solid goldenrod;
+    background: #1d1d1d;
+    border-radius: 5px;
+}
+
+input[type=file]{
+    color: white;
+    border: 2px solid goldenrod;
+    background: #1d1d1d;
+    border-radius: 5px;
+}
+
+input[type=text] {
+    min-width: 200px;
+    color: white;
+    border: 2px solid goldenrod;
+    background: #1d1d1d;
+    border-radius: 5px;
+}
+
+input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+}
+
+    input[type=checkbox]:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 0;
+        left: 0;
+        border: 2px solid goldenrod;
+        border-radius: 3px;
+        background-color: #1d1d1d;
+    }
+
+    input[type=checkbox]:checked:after {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: absolute;
+        top: 2px;
+        left: 6px;
+    }
+
+.container {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.text-width{
+    max-width: 90%;
+    padding-left: 45px;
+}
+
+.logo-img{
+    width: 50px;
+}
+
+.header {
+    display: flex;
+    padding-left: 200px;
+    padding-right: 200px;
+    align-items: center;
+    border-bottom: 2px solid darkgray;
+    height: 70px;
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.nav-list{
+    display: flex;
+    margin-right: auto;
+    list-style: none;
+}
+
+.nav-item.is-active a{
+    border: 2px solid goldenrod;
+}
+
+.nav-item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.nav-a{
+    border: 2px solid goldenrod;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.section-description {
+    background: url('../img/hero/hero2.png');
+    background-size: 30%;
+    height: 250px;
+}
+
+.manual-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.manual-flex-no-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+
+.manual-block{
+    flex: 1 50%;
+    justify-content: center;
+    align-items: left;
+}
+
+.manual-img{
+    max-width: 80%;
+}
+
+.manual-padding-img-first{
+    padding-top: 40px;
+}
+
+.manual-padding-last{
+    padding-top: 20px;
+}
+
+.details-padding-img-first{
+    padding-top: 78px;
+}
+
+/*Headings*/
+
+.lowheading{
+    text-align: center;
+}
+
+.lowheading-description{
+    padding-top: 70px;
+    padding-left: 100px;
+    text-align: left;
+}
+
+.lowheading-details{
+    text-align: center;
+}
+
+/*Fotter*/
+.footer{
+    margin-top: 40px;
+    border-top: 2px solid gray;
+}
+
+/*Details*/
+.details-img{
+    margin-bottom: 40px;
+    max-width: 40%;
+}
+
+.light-red-clr {
+    color: lightsalmon;
+}
+
+.red-clr {
+    color: red; /* Цвет текста */
+}
+
+.light-red-clr {
+    color: lightsalmon; /* Цвет текста */
+}
+
+.yellow-clr {
+    color: yellow; /* Цвет текста */
+}
+
+.goldenrod-clr {
+    color: goldenrod; /* Цвет текста */
+}
+
+.blue-clr {
+    color: lightblue; /* Цвет текста */
+}
+
+.green-clr {
+    color: green; /* Цвет текста */
+}
+
+

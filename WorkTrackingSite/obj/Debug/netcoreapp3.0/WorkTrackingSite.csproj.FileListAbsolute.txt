@@ -1,0 +1,7 @@
+D:\Projects\GitProjects\Work_Tracking_Project\WorkTrackingSite\obj\Debug\netcoreapp3.0\WorkTrackingSite.csprojAssemblyReference.cache
+D:\Projects\GitProjects\Work_Tracking_Project\WorkTrackingSite\obj\Debug\netcoreapp3.0\WorkTrackingSite.AssemblyInfoInputs.cache
+D:\Projects\GitProjects\Work_Tracking_Project\WorkTrackingSite\obj\Debug\netcoreapp3.0\WorkTrackingSite.AssemblyInfo.cs
+D:\Projects\GitProjects\Work_Tracking_Project\WorkTrackingSite\obj\Debug\netcoreapp3.0\WorkTrackingSite.csproj.CoreCompileInputs.cache
+D:\Projects\GitProjects\Work_Tracking_Project\WorkTrackingSite\obj\Debug\netcoreapp3.0\WorkTrackingSite.MvcApplicationPartsAssemblyInfo.cache
+D:\Projects\GitProjects\Work_Tracking_Project\WorkTrackingSite\obj\Debug\netcoreapp3.0\WorkTrackingSite.RazorAssemblyInfo.cache
+D:\Projects\GitProjects\Work_Tracking_Project\WorkTrackingSite\obj\Debug\netcoreapp3.0\WorkTrackingSite.RazorAssemblyInfo.cs

@@ -1,0 +1,411 @@
+﻿<Window
+    x:Class="NewWorkTracking.RepairCard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:inter="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:converters="clr-namespace:NewWorkTracking.Converters"
+    mc:Ignorable="d"
+    Title="{Binding Repair.InvNumber}"
+    Name="RepairCardWindow"
+    Style="{DynamicResource WindowStyle}"
+    Height="464.328"
+    Width="858"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <converters:BoolToVisibilityConverter
+            x:Key="BoolToVisibilityConverter" />
+        <converters:AccsessConverter
+            x:Key="AccsessConverter" />
+        <converters:InvConverter
+            x:Key="InvConverter" />
+        <converters:CharCutConverter
+            x:Key="CharCutConverter" />
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="335*" />
+            <RowDefinition
+                Height="44*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="399*" />
+            <ColumnDefinition
+                Width="451*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel
+            Margin="0 10 0 0">
+
+            <DockPanel
+                Margin="5,5,0,5">
+
+                <TextBlock
+                    Text="Дата"
+                    Margin="20 0 0 0"
+                    VerticalAlignment="Center" />
+                <DatePicker
+                    SelectedDate="{Binding Repair.Date}"
+                    Width="200"
+                    Margin="95 0 0 0" />
+            </DockPanel>
+
+
+            <DockPanel
+                Margin="5,5,0,5">
+
+                <TextBlock
+                    Text="Статус"
+                    Margin="20 0 0 0"
+                    VerticalAlignment="Center" />
+                <ComboBox
+                    Width="200"
+                    Margin="85 0 0 0"
+                    ItemsSource="{Binding MainObject.ComboBox.RepairStatus}"
+                    Text="{Binding Repair.Status}"
+                    DisplayMemberPath="Name" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="5 5 0 5">
+                <TextBlock
+                    Text="Тип ОС"
+                    Margin="20 0 0 0"
+                    VerticalAlignment="Center" />
+                <ComboBox
+                    Name="osType"
+                    Width="200"
+                    Margin="80 0 0 0"
+                    ItemsSource="{Binding MainObject.ComboBox.OsTypeList}"
+                    Text="{Binding Repair.OsName}"
+                    DisplayMemberPath="Name" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="5 5 0 5">
+
+                <TextBlock
+                    Text="Модель"
+                    Margin="20 0 0 0" />
+                <TextBox
+                    Width="200"
+                    Margin="77 0 0 0"
+                    Text="{Binding Repair.Model}" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="5 5 0 5">
+
+                <TextBlock
+                    Text="Серийный номер"
+                    Margin="20 0 0 0" />
+                <TextBox
+                    Width="200"
+                    Margin="24 0 0 0"
+                    Text="{Binding Repair.SNumber}" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="5 5 0 5">
+
+                <TextBlock
+                    Text="Инвентарный номер"
+                    Margin="20 0 0 0"
+                    VerticalAlignment="Center" />
+
+                <TextBox
+                    Width="200"
+                    Margin="5 0 0 0"
+                    Text="{Binding Repair.InvNumber, Converter={StaticResource CharCutConverter}}"
+                    MaxLength="12" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="5,5,0,5">
+
+                <TextBlock
+                    Text="СЦ ОКС"
+                    Margin="20 0 0 0"
+                    VerticalAlignment="Center" />
+                <ComboBox
+                    Width="200"
+                    Margin="77 0 0 0"
+                    ItemsSource="{Binding MainObject.ComboBox.ScOks}"
+                    Text="{Binding Repair.ScOks}"
+                    DisplayMemberPath="Name" />
+
+            </DockPanel>
+
+
+            <DockPanel
+                Margin="5 5 0 5">
+
+                <TextBlock
+                    Text="Основание"
+                    Width="120"
+                    Margin="20 0 0 0"
+                    TextWrapping="Wrap" />
+
+                <TextBox
+                    Width="200"
+                    Text="{Binding Repair.DiagNumber, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource InvConverter}}" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="5 5 0 5">
+
+                <TextBlock
+                    Text="КА поставщик"
+                    Margin="20 0 0 0"
+                    VerticalAlignment="Center" />
+
+                <TextBox
+                    Width="200"
+                    Margin="43 0 0 0"
+                    Text="{Binding Repair.KaProvider}" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="5 5 0 5">
+
+                <TextBlock
+                    Text="КА Ремонт"
+                    Margin="20 0 0 0"
+                    VerticalAlignment="Center" />
+
+                <TextBox
+                    Width="200"
+                    Margin="63 0 0 0"
+                    Text="{Binding Repair.KaRepair}" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="0 10 0 10">
+
+                <DockPanel.Resources>
+                    <Style
+                        TargetType="DockPanel">
+                        <Setter
+                            Property="Visibility"
+                            Value="Hidden" />
+                        <Style.Triggers>
+                            <DataTrigger
+                                Binding="{Binding ElementName=osType, Path=Text}"
+                                Value="Терминалы сбора данных">
+                                <Setter
+                                    Property="Visibility"
+                                    Value="Visible" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DockPanel.Resources>
+
+
+                <CheckBox
+                    Margin="20 0 0 0"
+                    Content="Аккумулятор"
+                    IsChecked="{Binding Repair.HaveAccumulator}" />
+                <CheckBox
+                    Margin="20 0 0 0"
+                    Content="Карта памяти"
+                    IsChecked="{Binding Repair.HaveFlashMemory}" />
+                <CheckBox
+                    Margin="20 0 0 0"
+                    Content="Ремешок"
+                    IsChecked="{Binding Repair.HaveHandBelt}" />
+                <CheckBox
+                    Margin="20 0 0 0"
+                    Content="Стилус"
+                    IsChecked="{Binding Repair.HaveStylus}" />
+
+            </DockPanel>
+
+        </StackPanel>
+
+        <StackPanel
+            Orientation="Horizontal"
+            Grid.Row="1">
+
+            <Button
+                Content="Записать"
+                Margin="50 0 0 0"
+                Command="{Binding AddNewRepair}" />
+
+            <Button
+                Content="Закрыть"
+                Margin="5 0 0 0"
+                Command="{Binding CloseCard}" />
+
+        </StackPanel>
+
+        <StackPanel
+            Grid.Column="1"
+            Margin="0 10 0 0">
+
+            <DockPanel
+                Margin="5 5 0 5">
+
+                <TextBlock
+                    Text="Передал"
+                    Margin="20 0 0 0"
+                    VerticalAlignment="Center" />
+                <TextBox
+                    Width="200"
+                    Margin="100 0 0 0"
+                    Text="{Binding Repair.HandedOver}" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="5 5 0 5">
+
+                <TextBlock
+                    Text="Неисправность"
+                    Margin="20 0 0 0"
+                    VerticalAlignment="Center" />
+                <TextBox
+                    Width="200"
+                    Margin="65 0 0 0"
+                    Text="{Binding Repair.Defect}" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="5 5 0 5">
+                <TextBlock
+                    Text="Дата отгрузки"
+                    Margin="20 0 0 0"
+                    VerticalAlignment="Center" />
+                <DatePicker
+                    Width="200"
+                    Margin="72 0 0 0"
+                    SelectedDate="{Binding Repair.ShipmentDate}" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="5 5 0 5">
+
+                <TextBlock
+                    Text="Дней в ремонте"
+                    Margin="20 0 0 0"
+                    VerticalAlignment="Center" />
+                <TextBox
+                    Width="200"
+                    Margin="63 0 0 0"
+                    Text="{Binding Repair.DaysOfRepair}" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="5 5 0 5">
+
+                <TextBlock
+                    Text="Вернулось из ремонта"
+                    Margin="20 0 0 0"
+                    VerticalAlignment="Center" />
+                <DatePicker
+                    Width="200"
+                    Margin="29 0 0 0"
+                    SelectedDate="{Binding Repair.ReturnFromRepair}" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="5 5 0 5">
+                <TextBlock
+                    Text="Номер заявки поставщика СЦ"
+                    Margin="20 0 0 0"
+                    Width="150"
+                    FontSize="10"
+                    VerticalAlignment="Center" />
+                <TextBox
+                    Width="200"
+                    Margin="3 0 0 0"
+                    Text="{Binding Repair.ProviderOrder}" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="5 5 0 5">
+
+                <TextBlock
+                    Text="Согласованная стоимость ремонта"
+                    Margin="20 0 0 0"
+                    Width="150"
+                    FontSize="10" />
+                <TextBox
+                    Width="200"
+                    Margin="3 0 0 0"
+                    Text="{Binding Repair.RepairBill}" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="5 5 0 5">
+
+                <TextBlock
+                    Text="Основание гарантии"
+                    VerticalAlignment="Center"
+                    Margin="20 0 0 0" />
+                <TextBox
+                    Width="200"
+                    Margin="40 0 0 0"
+                    Text="{Binding Repair.WarrantyBasis}" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="5 5 0 5">
+
+                <TextBlock
+                    Text="Дата начала гарантии"
+                    Margin="20 0 0 0"
+                    VerticalAlignment="Center" />
+                <DatePicker
+                    Width="200"
+                    Margin="32 0 0 0"
+                    SelectedDate="{Binding Repair.StartWarranty}" />
+
+            </DockPanel>
+
+            <DockPanel
+                Margin="5 5 0 5">
+
+                <TextBlock
+                    Text="Тип ремонта"
+                    Margin="20 0 0 0"
+                    VerticalAlignment="Center" />
+                <ComboBox
+                    Width="200"
+                    Margin="85 0 0 0"
+                    Text="{Binding Repair.Warranty}">
+
+                    <ComboBoxItem
+                        Content="Гарантийный ремонт" />
+                    <ComboBoxItem
+                        Content="Платный ремонт" />
+                    <ComboBoxItem
+                        Content="Сервисный контракт" />
+
+                </ComboBox>
+
+            </DockPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>

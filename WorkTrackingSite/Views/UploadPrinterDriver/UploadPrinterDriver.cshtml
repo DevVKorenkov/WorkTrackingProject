@@ -1,0 +1,80 @@
+﻿@using Install_Printers_Lib.Models
+@using Install_Printers_Lib.Actions;
+@{ }
+
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка драйвера</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="body">
+    <script src="/js/headerMenu.js"></script>
+    <main class="main">
+        <section class="section-description">
+            <div class="container">
+                <div class="description-content">
+                    <h1 class="main-heading">
+                        Добавление драйвера принтера
+                    </h1>
+                    <h3 class="lowheading lowheading-description">
+                        На этой странице вы можете добавить драйвер для принтера/МФУ.
+                        Перед загрузкой внимательно ознакомьтесь с инструкцией <a href="/InstallPrintersIndex/InstallPrintersIndex">Install printers (Загрузка драйвера)</a>
+                        Обратите внимание, что загрузка драйвера выбранного из сетевой папки может происходить гораздо дольше чем с локального диска.
+                        Допускается загрузка только .zip архивов.
+                    </h3>
+                </div>
+            </div>
+        </section>
+        <hr />
+        <section class="section-manual" id="UploadDriver">
+            <div class="container">
+                <h2 class="main-heading">
+                    Добавить драйвер принтера
+                </h2>
+                <form asp-action="UploadFile" asp-controller="UploadPrinterDriver" method="post" enctype='multipart/form-data'>
+                    <p>
+                        Модель принтера
+                        <input type="text" name="PrinterName" id="pn" placeholder="Модель принтера" />
+                    </p>
+                    <p id="netP">
+                        Сетевой принтер
+                        <input type="checkbox" name="NetPrinter" />
+                    </p>
+                    <p id="uploadF">
+                        Путь к zip файлу драйвера
+                        <input type="file" accept="application/zip" name="uploadFile" id="fn" required />
+                    </p>
+                    <input id="uploadB" type="submit" value="Загрузить" />
+                </form>
+                @if (ViewBag.message.ToString().ToLower().Contains("ошибка"))
+                {
+
+                    <h3 id="descriptionMessage" class="red-clr">@ViewBag.message</h3>
+                }
+                else
+                {
+                    <h3 id="descriptionMessage" class="goldenrod-clr">@ViewBag.message</h3>
+                }
+                <hr />
+                <h3>Уже добавленные принтеры:</h3>
+                <ul>
+                    @foreach (Printer t in Model)
+                    {
+                        <li class="li-printers">@t.PrinterName</li>
+                    }
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>
+            Информация будет добавлена позже.
+        </p>
+    </footer>
+    <script src="/js/hider.js"></script>
+    @*<script src="/js/Check.js"></script>*@
+</body>
+</html>
